@@ -4,8 +4,8 @@ import AppSidebar from '@/components/AppSidebar.vue';
 </script>
 
 <template>
-  <div class="lg:flex">
-    <div class="lg:w-1/5">
+  <div class="lg:flex bg-plain-medium shadow">
+    <div class="lg:w-1/4">
       <AppSidebar />
     </div>
     <RouterView />
