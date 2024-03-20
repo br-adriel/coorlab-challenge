@@ -6,6 +6,9 @@ export default {
       sans: ['Noto Sans', 'sans-serif'],
     },
     extend: {
+      boxShadow: {
+        deep: '0 0 8px rgba(0,0,0,0.8)',
+      },
       colors: {
         primary: '#04A8B5',
         secondary: '#2B2F42',
