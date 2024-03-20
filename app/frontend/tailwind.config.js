@@ -5,7 +5,17 @@ export default {
     fontFamily: {
       sans: ['Noto Sans', 'sans-serif'],
     },
-    extend: {},
+    extend: {
+      colors: {
+        primary: '#04A8B5',
+        secondary: '#2B2F42',
+        plainBg: {
+          ligher: '#FFFFFF',
+          medium: '#F9F8F9',
+          darker: '#F4F3F4',
+        },
+      },
+    },
   },
   plugins: [],
 };
