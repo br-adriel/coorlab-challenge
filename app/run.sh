@@ -10,8 +10,11 @@ source .venv/bin/activate
 echo "DJANGO SETUP: INSTALLING DEPENDENCIES"
 pip install -r requirements.txt &>/dev/null
 
-echo "DJANGO SETUP: RUN SERVER IN BACKGROUND"
+echo "DJANGO SETUP: MIGRATING DATABASE"
 cd server
+python3 manage.py migrate &>/dev/null
+
+echo "DJANGO SETUP: STARTING SERVER ON BACKGROUND"
 python3 manage.py runserver 3000 &>/dev/null &
 echo "DJANGO SETUP => PID: $!"
 
@@ -20,7 +23,7 @@ echo "DJANGO SETUP => DONE"
 
 echo ""
 echo "RETURN TO INITIAL STATE => STARTING..."
-echo "RETURN TO INITIAL STATE: RETURN TO APP FOLDER"
+echo "RETURN TO INITIAL STATE: RETURNING TO APP FOLDER"
 cd ../..
 echo "RETURN TO INITIAL STATE => DONE"
 echo ""
@@ -32,10 +35,10 @@ echo "VUE SETUP: INSTALLING DEPENDENCIES"
 cd frontend
 npm i &>/dev/null
 
-echo "VUE SETUP: BUILD PROJECT"
+echo "VUE SETUP: BUILDING PROJECT"
 npm run build &>/dev/null
 
-echo "VUE SETUP: RUN SERVER IN BACKGROUND"
+echo "VUE SETUP: STARTING SERVER ON BACKGROUND"
 npm run preview &>/dev/null &
 echo "VUE SETUP => PID: $!"
 
@@ -43,7 +46,7 @@ echo "VUE SETUP => DONE"
 
 echo ""
 echo "RETURN TO INITIAL STATE => STARTING..."
-echo "RETURN TO INITIAL STATE: RETURN TO APP FOLDER"
+echo "RETURN TO INITIAL STATE: RETURNING TO APP FOLDER"
 cd ..
 echo "RETURN TO INITIAL STATE => DONE"
 echo ""
