@@ -8,8 +8,8 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="w-full">
-    <p class="w-2/3 mb-3">
+  <div class="w-full py-8">
+    <p class="sm:w-2/3 mb-3">
       Essas são as melhores alternativas de viagem para a data selecionada
     </p>
     <TravelInfo :travel="best" class="mb-3" />

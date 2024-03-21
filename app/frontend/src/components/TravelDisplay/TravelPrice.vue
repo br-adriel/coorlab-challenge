@@ -12,7 +12,7 @@ const props = defineProps({
   <div
     :class="
       clsx({
-        'rounded w-1/3 flex flex-col justify-center p-4 text-sm': true,
+        'rounded-b sm:rounded w-full sm:w-1/3 flex flex-col justify-center p-4 text-sm': true,
         'bg-travel-lighter': !darkerVariant,
         'bg-travel-darker': darkerVariant,
       })

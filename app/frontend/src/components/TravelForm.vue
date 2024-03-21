@@ -42,7 +42,9 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="bg-plain-darker text-plain-typography rounded-lg px-8 py-28">
+  <div
+    class="bg-plain-darker text-plain-typography rounded-lg px-6 sm:px-8 py-14 lg:py-28"
+  >
     <h2 class="flex items-center gap-2 font-bold text-lg mb-8">
       <PhHandCoins size="32" weight="bold" />
       <span>Calcule o Valor da Viagem</span>

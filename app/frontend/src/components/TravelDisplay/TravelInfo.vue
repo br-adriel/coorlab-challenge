@@ -11,11 +11,11 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="flex gap-2 text-plain-typography">
+  <div class="flex flex-col sm:flex-row sm:gap-2 text-plain-typography">
     <div
       :class="
         clsx({
-          'rounded w-2/3 flex items-center': true,
+          'rounded-t sm:rounded w-full sm:w-2/3 flex items-center': true,
           'bg-travel-lighter': cheapestOption,
           'bg-travel-darker': !cheapestOption,
         })
