@@ -6,7 +6,7 @@ import SidebarItem from './SidebarItem.vue';
 
 <template>
   <div
-    class="bg-secondary shadow-deep lg:shadow-none w-full lg:min-h-[100dvh] px-5"
+    class="bg-secondary shadow-deep lg:shadow-none w-full lg:min-h-[100dvh] h-full px-5"
   >
     <div class="container mx-auto">
       <RouterLink to="/" class="block py-5">
