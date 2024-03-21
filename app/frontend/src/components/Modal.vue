@@ -10,7 +10,11 @@ const emit = defineEmits(['modalClose']);
     @click="$emit('modalClose')"
   >
     <div class="flex items-center justify-center min-h-full">
-      <AppCard :show-header="false" class="w-auto rounded-lg">
+      <AppCard
+        :show-header="false"
+        class="w-auto rounded-lg z-50"
+        @click.stop=""
+      >
         <slot></slot>
       </AppCard>
     </div>
