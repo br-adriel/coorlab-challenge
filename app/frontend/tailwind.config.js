@@ -13,6 +13,7 @@ export default {
         primary: '#04A8B5',
         secondary: '#2B2F42',
         plain: {
+          typography: '#515051',
           lighter: '#FFFFFF',
           medium: '#F9F8F9',
           darker: '#F4F3F4',
