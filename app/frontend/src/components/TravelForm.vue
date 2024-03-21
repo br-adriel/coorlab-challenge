@@ -16,7 +16,7 @@ async function formSubmit(form) {
 
   try {
     if (!form.data.city || !form.data.date) {
-      throw new Error('Insira os valores para realizar a cotação');
+      throw new Error('Insira os valores para realizar a cotação.');
     }
 
     const { data } = await api.post('/travels/options', form.data);
