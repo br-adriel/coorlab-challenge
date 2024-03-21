@@ -1,8 +1,9 @@
 <script setup>
-import { PhHandCoins, PhCalendar } from '@phosphor-icons/vue';
 import FormLabel from '@/components/FormLabel.vue';
-import { onMounted, ref } from 'vue';
 import { api } from '@/lib/axios';
+import { PhHandCoins } from '@phosphor-icons/vue';
+import { BIconCalendar4Week } from 'bootstrap-icons-vue';
+import { onMounted, ref } from 'vue';
 
 const emit = defineEmits(['success', 'error']);
 
@@ -72,7 +73,7 @@ onMounted(async () => {
           <FormLabel label="Data" for="date" />
         </template>
         <template v-slot:addon-after>
-          <PhCalendar />
+          <BIconCalendar4Week />
         </template>
       </DateElement>
 
