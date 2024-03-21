@@ -1,6 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./index.html', './src/**/*.vue'],
+  darkMode: 'class',
+  content: [
+    './index.html',
+    './src/**/*.vue',
+    './vueform.config.js',
+    './node_modules/@vueform/vueform/themes/tailwind/**/*.vue',
+    './node_modules/@vueform/vueform/themes/tailwind/**/*.js',
+  ],
   theme: {
     fontFamily: {
       sans: ['Noto Sans', 'sans-serif'],
