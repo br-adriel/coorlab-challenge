@@ -13,6 +13,7 @@
     "@phosphor-icons/vue": "^2.1.6",
     "@vueform/vueform": "^1.9.2",
     "axios": "^1.6.8",
+    "clsx": "^2.1.0",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
   },
