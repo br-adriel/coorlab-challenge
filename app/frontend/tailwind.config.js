@@ -25,6 +25,10 @@ export default {
           medium: '#F9F8F9',
           darker: '#F4F3F4',
         },
+        travel: {
+          darker: '#E3E2E3',
+          lighter: '#F3F2F3',
+        },
       },
       form: (theme) => ({
         primary: theme('colors.primary'),
