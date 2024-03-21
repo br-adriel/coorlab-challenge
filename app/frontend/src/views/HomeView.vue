@@ -1,28 +1,30 @@
 <script setup>
 import AppCard from '@/components/AppCard.vue';
-import TravelForm from '@/components/TravelForm.vue';
 import TravelDisplay from '@/components/TravelDisplay';
+import TravelForm from '@/components/TravelForm.vue';
+import WarningModal from '@/components/WarningModal.vue';
 import { PhVan } from '@phosphor-icons/vue';
 import { ref } from 'vue';
 
 const travelOptions = ref({});
+const showErrorModal = ref(false);
+const errorMessage = ref('');
 
 function onFormSuccess(bestOption, cheapestOption) {
   travelOptions.value.best = bestOption;
   travelOptions.value.cheapest = cheapestOption;
-  console.log(bestOption);
-  console.log(cheapestOption);
 }
 
 function onFormError(message) {
-  // TODO: show modal
+  errorMessage.value = message;
+  showErrorModal.value = true;
   travelOptions.value = {};
 }
 </script>
 
 <template>
   <main class="w-full px-8 py-10">
-    <AppCard>
+    <AppCard class="w-full">
       <template #header>
         <div class="flex items-center gap-2">
           <PhVan :size="24" />
@@ -42,5 +44,11 @@ function onFormError(message) {
         </div>
       </div>
     </AppCard>
+
+    <WarningModal
+      v-if="showErrorModal"
+      @modal-close="showErrorModal = !showErrorModal"
+      :message="errorMessage"
+    />
   </main>
 </template>
