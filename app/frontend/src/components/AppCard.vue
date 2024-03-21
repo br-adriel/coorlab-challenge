@@ -9,7 +9,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="bg-plain-lighter w-full rounded shadow-lg">
+  <div class="bg-plain-lighter rounded shadow-lg">
     <div
       class="bg-secondary px-8 py-4 rounded-t text-white font-semibold"
       v-if="props.showHeader"
