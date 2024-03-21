@@ -26,7 +26,23 @@ export default {
           darker: '#F4F3F4',
         },
       },
+      form: (theme) => ({
+        primary: theme('colors.primary'),
+        btnPx: {
+          base: theme('padding')['10'],
+          sm: theme('padding')['10'],
+          lg: theme('padding')['5'],
+        },
+        btnPy: {
+          base: theme('padding')['1'],
+          sm: theme('padding')['1'],
+          lg: theme('padding')['5'],
+        },
+        textColors: {
+          btn: theme('colors.secondary'),
+        },
+      }),
     },
   },
-  plugins: [],
+  plugins: [require('@vueform/vueform/tailwind')],
 };
